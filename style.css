@@ -1,45 +1,63 @@
 body {
   font-family: sans-serif;
-  text-align: center;
-  color: white;
   margin: 0;
   height: 100vh;
 
-  background: url('https://images.unsplash.com/photo-1769576787092-5ffea8649c3b?w=600&auto=format&fit=crop&q=60') no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  color: white;
+
+  background: url('https://images.unsplash.com/photo-1769576787092-5ffea8649c3b?w=600&auto=format&fit=crop&q=60')
+  no-repeat center center/cover;
+
   position: relative;
-  z-index: 1;
+  overflow: hidden;
 }
 
-/* Blur overlay */
+/* DARK + BLUR LAYER */
 body::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: inherit;
-  filter: blur(8px);
-  z-index: -1;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(6px);
+  z-index: 0;
 }
+
+/* TITLE */
 h2 {
-  margin: 20px;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 15px;
 }
 
+/* GAME GRID FIX */
 .game {
+  position: relative;
+  z-index: 2;
+
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 80px);
   gap: 10px;
-  max-width: 400px;
-  margin: auto;
+
+  justify-content: center;
+  align-content: center;
 }
 
+/* CARD FIX */
 .card {
-  background: #1e293b;
+  width: 80px;
   height: 80px;
+
+  background: #1e293b;
   display: flex;
   justify-content: center;
   align-items: center;
+
   font-size: 24px;
   border-radius: 10px;
   cursor: pointer;
@@ -50,9 +68,15 @@ h2 {
   color: black;
 }
 
+/* MOBILE */
 @media (max-width: 480px) {
+  .game {
+    grid-template-columns: repeat(4, 65px);
+  }
+
   .card {
-    height: 60px;
+    width: 65px;
+    height: 65px;
     font-size: 20px;
   }
 }
