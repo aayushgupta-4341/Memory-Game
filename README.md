@@ -40,7 +40,8 @@ This project helps users improve memory skills by matching pairs of cards.
 
 ## 📸 Screenshot
 
-<img width="1915" height="913" alt="memory-game" src="your-screenshot-link-here" />
+<img width="1918" height="957" alt="image" src="https://github.com/user-attachments/assets/8e50e402-e51d-4db8-a7f8-ad678b1615d2" />
+
 
 ---
 
