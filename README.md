@@ -13,7 +13,7 @@ This project helps users improve memory skills by matching pairs of cards.
 
 ## 📂 GitHub Repository
 
-[🔗 https://github.com/your-username/memory-game](#)
+🔗https://github.com/aayushgupta-4341/Memory-Game.git
 
 ---
 
