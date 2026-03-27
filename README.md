@@ -7,7 +7,7 @@ This project helps users improve memory skills by matching pairs of cards.
 
 ## 🚀 Live Demo
 
-[[🔗 https://your-netlify-link-here](#)](https://memory-gamy.netlify.app/)
+🔗https://memory-gamy.netlify.app/
 
 ---
 
