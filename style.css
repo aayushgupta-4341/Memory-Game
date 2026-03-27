@@ -1,0 +1,58 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  color: white;
+  margin: 0;
+  height: 100vh;
+
+  background: url('https://images.unsplash.com/photo-1769576787092-5ffea8649c3b?w=600&auto=format&fit=crop&q=60') no-repeat center center/cover;
+  position: relative;
+  z-index: 1;
+}
+
+/* Blur overlay */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: inherit;
+  filter: blur(8px);
+  z-index: -1;
+}
+h2 {
+  margin: 20px;
+}
+
+.game {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  max-width: 400px;
+  margin: auto;
+}
+
+.card {
+  background: #1e293b;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.card.flipped {
+  background: #38bdf8;
+  color: black;
+}
+
+@media (max-width: 480px) {
+  .card {
+    height: 60px;
+    font-size: 20px;
+  }
+}
